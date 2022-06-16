@@ -1,0 +1,41 @@
+<html>
+
+<head>
+	<script src="https://code.jquery.com/jquery-1.11.0.min.js"></script>
+	<style>
+		div{
+		cursor: ;
+		}
+
+		.box{
+		width: 300px;
+		padding: 10px;
+		border: 1px solid #9e0e0e;
+		background-color: #cec9c9;
+		cursor:    !important;
+		}
+		#box1 {position: static; cursor: wait;}
+		#box2 {position: relative; top: 20px; left: 30px; cursor: pointer;}
+		#box3 {position: absolute; top: 400px; right: 30px; cursor: text;}
+		#box4 {position: fixed; top: 50px; right: 30px; cursor: help;}
+	</style>
+</head>
+
+<body>
+	<div id="box1" class="box">static 박스</div>
+	<div id="box2" class="box">relative 박스</div>
+	<div id="box3" class="box">absolute 박스</div>
+	<div id="box4" class="box">fixed 박스</div>
+
+	<script>
+	$('#box1').click(function(){
+		$(this).text('after life');
+    });
+
+    $('#box2').click(function(){
+        $(this).css('background-color','#ae0909');
+    });
+	</script>
+</body>
+
+</html>
